@@ -1,0 +1,7 @@
+---
+title: "Sources"
+---
+
+- https://www.kaggle.com/datasets/thedevastator/global-climate-risk-index-and-related-economic-l
+
+- ChatGPT

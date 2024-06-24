@@ -1,0 +1,35 @@
+---
+title: "Bar Chart"
+execute: 
+  echo: false
+  warning: false
+---
+
+```{r}
+#| label: setup 
+#| message: false
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+```
+
+```{r}
+#| label: variables
+#| message: false
+c <- read_csv("climate-risk-index-1.csv")
+```
+
+```{r}
+#| label: bar chart
+#| message: false
+# Get the top 10 countries by total fatalities
+top_countries <- c %>% arrange(desc(fatalities_total)) %>% slice(1:10)
+ggplot(top_countries, aes(x = reorder(rw_country_name, fatalities_total), y = fatalities_total)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  coord_flip() +
+  labs(title = "Top 10 Countries by Total Fatalities",
+       x = "Country",
+       y = "Total Fatalities") +
+  theme_minimal()
+```
+

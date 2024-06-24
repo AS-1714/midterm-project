@@ -1,0 +1,50 @@
+---
+title: "Economic Losses Vs. Climate Score"
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| message: false
+#| label: setup
+library(tidyverse)
+library(dplyr)
+library(sf)
+```
+
+```{r}
+#| message: false
+climate <- read_csv("climate-risk-index-1.csv")
+```
+
+```{r}
+#| message: false
+world <- st_read(system.file("shape/nc.shp", package = "sf"))
+
+```
+
+```{r}
+#| message: false
+#| warning: false
+if (!"geometry" %in% colnames(climate)) {
+  message("No geometry column found in climate data.")
+}
+
+world <- left_join(world, climate, by = c("NAME" = "rw_country_name"))
+
+
+```
+
+```{r}
+#| message: false
+world |> 
+  ggplot() +
+  geom_sf(aes(fill = cri_score), color = "black") +
+  scale_fill_viridis_c(option = "plasma") +
+  labs(title = "Climate Risk Index Score by Country",
+       fill = "CRI Score") +
+  theme_minimal()
+```
+

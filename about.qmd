@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+  Hi! My name is Aanya Shah, and I will be a freshman from New Jersey. 
+
+  You can see this project and much more details in my github: https://github.com/AS-1714
+
+  If you want to contact me, my email is shyneh8118@gmail.com. 
+
+  I made this project because I always thought that the changes in the climate is something that people should be aware of. I wanted to explore the losses in economy because I always felt people looked at all the other effects. If you want to see more details, here is my github repo: https://github.com/AS-1714/midterm-project
+
+  This project was created as a part of Kane's Data Science Bootcamp: https://bootcamp.davidkane.info 

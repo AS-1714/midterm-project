@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: c8bb62a6-b2b0-45cc-bc26-4f604db11f35
+      url: 'https://as-1714.quarto.pub/economic-losses-vs-climate-score'
